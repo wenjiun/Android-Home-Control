@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5">
+	<servlet>
+		<servlet-name>HomeMonitorServer</servlet-name>
+		<servlet-class>my.edu.mmu.homeserver.HomeMonitorServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>HomeMonitorServer</servlet-name>
+		<url-pattern>/homemonitor</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>HomeControlServer</servlet-name>
+		<servlet-class>my.edu.mmu.homeserver.HomeControlServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>HomeControlServer</servlet-name>
+		<url-pattern>/homecontrol</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Register</servlet-name>
+		<servlet-class>my.edu.mmu.homeserver.RegisterServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Register</servlet-name>
+		<url-pattern>/register</url-pattern>
+	</servlet-mapping>
+
+
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+</web-app>
